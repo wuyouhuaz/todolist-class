@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>ToDoList</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>TodoList</h1>
+        <div class="row">
+            <div class="col sidebar">
+                <div class="sidebar-title">分组</div>
+                <hr>
+                <div id="cat-list" class="cat-list">
+                    <!-- <div class="cat-list-item">
+                        <div class="cat-list-title">
+                            <div>123</div>
+                        </div>
+                        <div class="tool-set">
+                            <span class="update">更新</span>
+                            <span class="delete">删除</span>
+                        </div>
+                    </div> -->
+                </div>
+
+                <form id="cat-form" class="cat-form" hidden>
+                    <input type="hidden" name="id">
+                    <input type="text" class="cat-form-input" name="title" autocomplete="off">
+                    <button type="submit" class="cat-form-completed">完成</button>
+                    <button type="button" class="cat-form-cancel" data-action="cancel">取消</button>
+                </form>
+
+                <div class="add-btn">
+                    <button id="add-cat" class="add-cat">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col task">
+                <form id="todo-form" class="row todo-form">
+                    <input type="hidden" name="id">
+                    <input name="completed" type="checkbox" style="display:none">
+                    <input id="todo-input" type="text" name="title" class="col todo-form-input" autocomplete="off">
+                    <button class="col todo-form-add">添加</button>
+                </form>
+                <h3 class="todo-title">未完成</h3>
+                <div id="todo-list" class="todo-list">
+                    <!-- <div class="todo-item">
+                        <div class="col checkbox">
+                            <input name="completed" type="checkbox">
+                        </div>
+                        <div class="col detail">
+                            <div class="title">123</div>
+                        </div>
+                        <div class="col tool-set">
+                            <button class="update">更新</button>
+                            <button class="finished">完成</button>
+                            <button class="remove">删除</button>
+                        </div>
+                    </div> -->
+                </div>
+                <hr>
+                <h3 class="done-title">已完成</h3>
+                <div id="task-done" class="task-done">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/util/formaction.js"></script>
+    <script src="js/api/baseapi.js"></script>
+    <script src="js/api/taskapi.js"></script>
+    <script src="js/api/catapi.js"></script>
+    <script src="js/ui/catui.js"></script>
+    <script src="js/ui/taskui.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

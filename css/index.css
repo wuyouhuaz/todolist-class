@@ -1,0 +1,259 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+hr {
+    display: block;
+    height: 2px;
+    width: 100%;
+    border: 0;
+    background: #dd573999;
+}
+
+h1 {
+    color: #dd5739;
+    text-align: center;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.container {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.row {
+    font-size: 0;
+}
+
+.col {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1rem;
+}
+
+.sidebar {
+    width: 30%;
+}
+
+.sidebar .sidebar-title {
+    text-align: center;
+    font-size: 18px;
+    color: #79c991;
+}
+
+.sidebar .cat-list .cat-list-item {
+    position: relative;
+    padding: 8px 5px;
+    cursor: pointer;
+    border-radius: 5px;    
+}
+
+.sidebar .cat-list .cat-list-item>* {
+    vertical-align: middle;
+}
+
+.sidebar .cat-list .cat-list-item:hover {
+    background: #ffd3bd;
+}
+
+.sidebar .cat-list .cat-list-item:hover .tool-set {
+    display: inline-block;
+}
+
+.sidebar .cat-list .cat-list-item.active {
+    background: #8be1a5;
+}
+
+.sidebar .cat-list .cat-list-item .cat-list-title {
+    font-size: .9rem;
+}
+
+.sidebar .cat-list .cat-list-item .tool-set {
+    padding: 3px 0;
+    text-align: right;
+    font-size: .7rem;
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    display: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sidebar .cat-list .cat-list-item .tool-set>* {
+    display: inline-block;
+    padding: 0 2px;
+}
+
+.sidebar .cat-list .cat-list-item .tool-set>*:hover {
+    color: #dd6d39;
+}
+
+.sidebar .cat-list .cat-list-item input[disabled] {
+    background: transparent;
+    border: 0;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.sidebar .add-cat {
+    display: block;
+    width: 100%;
+    background-color: #dd6d39;
+    color: #00fff7;
+    border: 1px solid #dd6d39;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.sidebar .cat-form{
+    margin: 15px 0;
+}
+.sidebar .cat-form .cat-form-input {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #dd6d39;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+.sidebar .cat-form .cat-form-completed,
+.sidebar .cat-form .cat-form-cancel {
+    padding: 3px 5px;
+    border: 1px solid #dd6d39;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #dd6d39;
+    color: #fff;
+    margin: 0 22px;
+}
+
+.sidebar .add-btn{
+    margin: 15px 0;
+}
+
+.task {
+    width: 70%;
+    padding-left: 10px;
+}
+.task .todo-title{
+    color: #71e494;
+}
+.task .done-title {
+    color: #ffab7e;
+}
+
+.task .todo-form {
+    margin-bottom: 30px;
+}
+
+.task .todo-form .todo-form-input,
+.task .todo-form .todo-form-add {
+    display: inline-block;
+    padding: 10px;
+    height: 45px;
+    border: 1px solid #ca2100;
+}
+
+.task .todo-form .todo-form-input {
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.task .todo-form .todo-form-add {
+    width: 20%;
+    border-left: 0;
+    background-color: #dd6d39;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+
+.task .task-done .todo-item {
+    background-color: #ffdecd;
+    border-radius: 5px;
+}
+.task .todo-list .todo-item{
+    background-color: #c1ffd4;
+    border-radius: 5px;
+}
+
+.task .task-done .todo-item >* {
+    vertical-align: middle;
+}
+
+.task .todo-list .todo-item,
+.task .task-done .todo-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.task .todo-list .todo-item>* {
+    vertical-align: middle;
+}
+
+.task .todo-list .todo-item-title {
+    font-size: 1.17em;
+}
+
+.task .todo-list .todo-item .checkbox,
+.task .task-done .todo-item .checkbox {
+    width: 10%;
+}
+
+.task .todo-list .todo-item .detail,
+.task .task-done .todo-item .detail {
+    width: 55%;
+}
+
+.task .todo-list .todo-item .tool-set,
+.task .task-done .todo-item .tool-set {
+    width: 35%;
+    text-align: right;
+}
+
+.task .todo-list .todo-item .tool-set *,
+.task .task-done .todo-item .tool-set * {
+    padding: 5px;
+    background-color: #dd6d39;
+    color: #fff;
+    border: 1px solid #ca2100;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.task .todo-list .checkbox .task-not-checked {
+    color: #5fa774;
+    margin-left: 10px;
+}
+
+.task .task-done .checkbox .task-checked{
+    color: #dd5739;
+    margin-left: 10px;
+}
+
+.empty-holder {
+    font-size: .9rem;
+    opacity: .5;
+    text-align: center;
+    padding: 10px;
+}
